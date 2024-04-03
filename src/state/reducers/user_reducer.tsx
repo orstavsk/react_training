@@ -1,3 +1,5 @@
+//file names should be in camelCase
+
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import Product from "../../types/Product";
 import { RootState } from "../store";

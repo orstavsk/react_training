@@ -7,6 +7,7 @@ interface ProgressBarOrderProps {
     isOpen: boolean;
 }
 
+// snackbar with alert is used multiple times so it should be a component
 const ProgressBarOrder = (props: ProgressBarOrderProps) => {
     return (
         <Snackbar

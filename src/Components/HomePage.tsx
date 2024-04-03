@@ -4,8 +4,6 @@ import { Grid, LinearProgress } from "@mui/material";
 import Product from "../types/Product";
 import { useState } from "react";
 
-
-
 const HomePage = () => {
     const [loading,setLoading]=useState<boolean>(true);
     const [products]= useproductList(setLoading);

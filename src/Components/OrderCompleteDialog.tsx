@@ -6,7 +6,7 @@ interface OrderCompleteDialogProps {
 }
 
 const OrderCompleteDialog = (props: OrderCompleteDialogProps) => {
-  const { open, onClose } = props;
+  const { open, onClose } = props; //this is a nice idea but not consistent throughout the project, so use props.onClose instead
 
   return (
     <Dialog open={open} onClose={onClose} >
