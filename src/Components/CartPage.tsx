@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux';
 import { List, ListItem, ListItemText, IconButton, Avatar, ListItemAvatar, Typography, Button, Alert, Snackbar } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Product from '../types/Product';
-import { selectCart, selectCartTotalPrice, selectCarttotalCount } from '../state/reducers/cart_reducer';
+import { selectCart, selectCartTotalPrice, selectCarttotalCount } from '../state/reducers/cartReducer';
 import useCartActions from '../hooks/useCartActions';
 import OrderCompleteDialog from './OrderCompleteDialog';
-import { selectCash } from '../state/reducers/user_reducer';
-import ProgressBarOrder from './ProgressBarOrder';
+import { selectCash } from '../state/reducers/userReducer';
+import ProgressBarOrder from './ProgressBarAlert';
 
 const CartPage: React.FC = () => {
     const cash = useSelector(selectCash);

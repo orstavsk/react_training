@@ -8,8 +8,8 @@ import './App.css';
 import HomePage from './Components/HomePage';
 import CartPage from './Components/CartPage';
 import { useSelector } from 'react-redux';
-import { selectCarttotalCount } from './state/reducers/cart_reducer';
-import { selectCash } from './state/reducers/user_reducer';
+import { selectCarttotalCount } from './state/reducers/cartReducer';
+import { selectCash } from './state/reducers/userReducer';
 
 function App() {
   const [page, setPage] =useState<string>('home');

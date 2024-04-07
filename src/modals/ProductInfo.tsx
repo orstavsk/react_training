@@ -14,7 +14,7 @@ interface ProductInfoModalProps {
     addToCart: (product: Product) => void;
 }
 
-const ProductInfoModal: React.FC<ProductInfoModalProps> = (props) => {
+const ProductInfoModal: React.FC<ProductInfoModalProps> = (props:ProductInfoModalProps) => {
     return (
         <Dialog open={props.isOpen} onClose={props.onClose}>
             <DialogTitle>{props.product?.name}</DialogTitle>

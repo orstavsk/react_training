@@ -6,16 +6,16 @@ interface OrderCompleteDialogProps {
 }
 
 const OrderCompleteDialog = (props: OrderCompleteDialogProps) => {
-  const { open, onClose } = props;
 
   return (
-    <Dialog open={open} onClose={onClose} >
-        < DialogTitle>תתחדש/י!</DialogTitle>
+    <Dialog open={props.open} onClose={props.onClose} >
+      <DialogTitle>תתחדש/י!</DialogTitle>
       <DialogActions>
-        <Button onClick={onClose}>סגור</Button>
+        <Button onClick={props.onClose}>סגור</Button>
       </DialogActions>
     </Dialog>
   );
+  
 };
 
 export default OrderCompleteDialog;

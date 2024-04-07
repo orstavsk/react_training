@@ -4,7 +4,7 @@ import Product from "../types/Product";
 import ProductInfo from "../modals/ProductInfo";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../state/reducers/cart_reducer";
+import { addToCart } from "../state/reducers/cartReducer";
 
 interface ProductCardProps {
   product: Product;

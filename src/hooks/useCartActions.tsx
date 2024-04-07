@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
-import { deleteFromCart } from '../state/reducers/cart_reducer';
+import { deleteFromCart } from '../state/reducers/cartReducer';
 import { RootState } from '../state/store';
 import { useSelector } from 'react-redux';
-import { orderProduct } from '../state/reducers/user_reducer';
+import { orderProduct } from '../state/reducers/userReducer';
 import { useState } from 'react';
 
 const useCartActions = () => {

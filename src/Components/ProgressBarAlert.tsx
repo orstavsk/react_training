@@ -1,16 +1,17 @@
+import React from 'react';
 import LinearProgress from '@mui/material/LinearProgress';
 import MuiAlert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
 
-interface ProgressBarOrderProps {
+interface ProgressBarAlertProps {
     progress: number;
     isOpen: boolean;
 }
 
-const ProgressBarOrder = (props: ProgressBarOrderProps) => {
+const ProgressBarAlert: React.FC<ProgressBarAlertProps> = ({ progress, isOpen }) => {
     return (
         <Snackbar
-            open={props.isOpen}
+            open={isOpen}
             autoHideDuration={3000}
             anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         >
@@ -22,7 +23,7 @@ const ProgressBarOrder = (props: ProgressBarOrderProps) => {
             >
                 <LinearProgress
                     variant="determinate"
-                    value={props.progress}
+                    value={progress}
                     sx={{
                         width: '200px'
                     }}
@@ -32,4 +33,4 @@ const ProgressBarOrder = (props: ProgressBarOrderProps) => {
     );
 };
 
-export default ProgressBarOrder;
+export default ProgressBarAlert;
