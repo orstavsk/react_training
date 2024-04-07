@@ -12,7 +12,7 @@ import ProgressBarOrder from './ProgressBarAlert';
 const CartPage: React.FC = () => {
     const cash = useSelector(selectCash);
     const cartItems = useSelector(selectCart);
-    const cartItemsCount = useSelector(selectCarttotalCount);
+    const cartItemsCount = useSelector(selectCarttotalCount); //selectCartTotalCount
     const totalPrice = useSelector(selectCartTotalPrice);
     const { handleDelete, orderProducts, progress } = useCartActions();
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -34,6 +34,7 @@ const CartPage: React.FC = () => {
 
     return (
         <div>
+            {/* maybe keep a isLoading state to make it more readable */}
             {progress > 0 && progress < 100 && (
                 <ProgressBarOrder progress={progress} isOpen={true} />
             )}
@@ -60,6 +61,7 @@ const CartPage: React.FC = () => {
 
                     <List>
                         {cartItems.map((item: Product, index: number) => (
+                            // this should be a component
                             <ListItem key={index} sx={{ display: 'flex', justifyContent: 'space-between' }}>
                                 <div style={{ display: 'flex' }}>
                                     <ListItemAvatar>
